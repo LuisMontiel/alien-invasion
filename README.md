@@ -6,6 +6,7 @@ Requisitos:
     python --version
 - El paquete pygame
     python-m pip install pygame
+
 Para ejecutar el juego:
 - Abrir la terminal dentro de la carpeta alien-invasion
 - Usar el comando
