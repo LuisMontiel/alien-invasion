@@ -1,9 +1,11 @@
 import pygame, settings
+from pygame.sprite import Sprite
 
-class Ship:
+class Ship(Sprite):
     # Una clase para manejar la nave espacial
     def __init__(self, ai_game):
         # Inicializar la nave y asignarla en la posicion de inicio
+        super().__init__()
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         self.screen_rect = ai_game.screen.get_rect()
@@ -34,6 +36,10 @@ class Ship:
             
         self.rect.x = self.x
 
+    def center_ship(self):
+        """ Centrar la nave en la pantalla """
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)
 
     def blitme(self):
         # Dibujar la nave en su locacion actual
