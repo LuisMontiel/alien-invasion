@@ -12,7 +12,7 @@ class Ship(Sprite):
 
         # Carga la imagen de la nave y tomar su rect
         self.image = pygame.image.load('images/ship.png')
-        self.image = pygame.transform.scale(self.image, (100, 100))
+        self.image = pygame.transform.scale(self.image, (75, 75))
         self.rect = self.image.get_rect()
 
         # Empezar cada nave en la parte centroinferior de la pantalla

@@ -11,7 +11,7 @@ class Settings:
         self.ship_limit = 3
 
         # Configuracion de balas
-        self.bullet_width = 1000
+        self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = (235, 255, 0)
         self.bullets_allowed = 3
@@ -28,9 +28,9 @@ class Settings:
     
     def initialize_dynamic_settings(self):
         """ Inicializa configuraciones que cambia durante el juego """
-        self.ship_speed = 10
+        self.ship_speed = 5
         self.bullet_speed = 5.0
-        self.alien_speed = 5
+        self.alien_speed = 3
 
         # fleet_direction de uno representa derecha; -1 representa izquierda
         self.fleet_direction = 1

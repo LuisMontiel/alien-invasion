@@ -14,7 +14,7 @@ class Scoreboard:
         self.stats = ai_game.stats
 
         # Configuracion de la fuente para la informacion del puntuaje
-        self.text_color = (30, 30 ,30)
+        self.text_color = (255, 255, 255)
         self.font = pygame.font.SysFont(None, 48)
 
         # Preparar la imagen inicial del puntuaje
@@ -28,7 +28,7 @@ class Scoreboard:
         rounded_score = round(self.stats.score, -1)
         score_str = f"{rounded_score:,}"
         self.score_image = self.font.render(score_str, True,
-                                            self.text_color, self.settings.bg_color)
+                                            self.text_color)
         # Mostar el puntuaje en la parte superior a la derecha de la pantalla
         self.score_rect = self.score_image.get_rect()
         self.score_rect.right = self.screen_rect.right - 20
@@ -46,7 +46,7 @@ class Scoreboard:
         high_score = round(self.stats.high_score, -1)
         high_score_str = f"{high_score:,}"
         self.high_score_image = self.font.render(high_score_str, True,
-                                                 self.text_color, self.settings.bg_color)
+                                                 self.text_color)
         
         # Centrar el puntuaje alto en la parte superior de la pantalla.
         self.high_score_rect = self.high_score_image.get_rect()
@@ -64,7 +64,7 @@ class Scoreboard:
         """ Cambiar el nivel a una imagen renderizada. """
         level_str = str(self.stats.level)
         self.level_image = self.font.render(level_str, True,
-                                            self.text_color, self.settings.bg_color)
+                                            self.text_color)
         # Posiciona el nivel debajo del puntuaje
         self.level_rect = self.level_image.get_rect()
         self.level_rect.right = self.score_rect.right

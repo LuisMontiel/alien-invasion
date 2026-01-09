@@ -16,7 +16,7 @@ class AlienInvasion:
         pygame.init()
 
         self.settings = Settings()
-
+        
         # Resolucion de la ventana
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
 
@@ -27,12 +27,6 @@ class AlienInvasion:
         self.play_button = Button(self, "Play")
 
         self.clock = pygame.time.Clock()
-
-        """
-        self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-        self.settings.screen_width = self.screen.get_rect().width
-        self.settings.screen_height = self.screen.get_rect().height
-        """
 
         self.background_image = pygame.image.load('images/space_back.png')
         self.background_image = pygame.transform.scale(self.background_image, (self.settings.screen_width, self.settings.screen_height))
